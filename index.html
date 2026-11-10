@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Esensible Solutions | Technology solutions built around you">
+  <meta property="og:title" content="Esensible Solutions | From commit to customer">
   <meta property="og:description" content="Application development, DevOps, data, quality engineering, consulting, staffing and training.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +47,7 @@
 
       <nav class="nav__links" id="nav-links" aria-label="Primary">
         <a href="#services">Services</a>
-        <a href="#approach">Approach</a>
+        <a href="#pipeline">Pipeline</a>
         <a href="#engage">Engagement</a>
         <a href="#training">Training</a>
         <a href="#contact" class="btn btn--primary btn--sm nav__cta">Book a call</a>
@@ -73,19 +73,19 @@
         <div class="hero__copy">
           <a href="#services" class="pill reveal">
             <span class="pill__dot"></span>
-            Engineering · DevOps · Data · Talent
+            Code · Infra · Kubernetes · Cloud · Deploy
             <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
 
           <h1 class="hero__title reveal">
-            Technology solutions,<br>
-            <span class="gradient-text">built around you.</span>
+            From commit<br>
+            <span class="gradient-text">to customer.</span>
           </h1>
 
           <p class="hero__lead reveal">
-            Esensible designs, builds and runs modern applications, data platforms and delivery
-            pipelines for enterprises and startups alike. When you need more hands, we bring vetted
-            engineers who plug straight into your team.
+            Esensible builds the whole delivery pipeline: application code, infrastructure automation,
+            Kubernetes, cloud platforms and the deployments that put software in front of your users.
+            When you need more hands, we bring vetted engineers who plug straight into your team.
           </p>
 
           <div class="hero__actions reveal">
@@ -97,43 +97,44 @@
 
           <dl class="hero__stats reveal">
             <div><dt>5+ yrs</dt><dd>enterprise delivery</dd></div>
-            <div><dt>7</dt><dd>practice areas</dd></div>
+            <div><dt>6</dt><dd>pipeline stages covered</dd></div>
             <div><dt>3</dt><dd>ways to engage</dd></div>
           </dl>
         </div>
 
-        <!-- Illustrative product-style visual (decorative) -->
-        <div class="console reveal" aria-hidden="true">
-          <div class="console__bar">
+        <!-- Pipeline visual (decorative) -->
+        <div class="pipe reveal" aria-hidden="true">
+          <div class="pipe__bar">
             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <span class="console__title">pipeline / customer-portal</span>
-            <span class="badge badge--live">live</span>
+            <span class="pipe__title">delivery-pipeline / customer-portal</span>
+            <span class="badge badge--live">running</span>
           </div>
 
-          <div class="console__stages">
-            <div class="stage is-done"><span class="stage__icon"></span>Plan</div>
-            <div class="stage is-done"><span class="stage__icon"></span>Build</div>
-            <div class="stage is-done"><span class="stage__icon"></span>Test</div>
-            <div class="stage is-running"><span class="stage__icon"></span>Deploy</div>
+          <div class="pipe__flow">
+            <div class="pipe__track"><span class="pkt"></span><span class="pkt"></span><span class="pkt"></span></div>
+            <div class="pnode is-done"><span class="pnode__icon"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span><span class="pnode__name">Code</span><span class="pnode__meta">a1f9c2e</span></div>
+            <div class="pnode is-done"><span class="pnode__icon"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg></span><span class="pnode__name">Infra</span><span class="pnode__meta">terraform</span></div>
+            <div class="pnode is-done"><span class="pnode__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.5"/><path d="M12 3.5v6M12 14.5v6M3.5 12h6M14.5 12h6M6 6l4.2 4.2M13.8 13.8L18 18M18 6l-4.2 4.2M10.2 13.8L6 18"/></svg></span><span class="pnode__name">Kubernetes</span><span class="pnode__meta">helm v3</span></div>
+            <div class="pnode is-done"><span class="pnode__icon"><svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.5-7.97A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7z"/></svg></span><span class="pnode__name">Cloud</span><span class="pnode__meta">multi-cloud</span></div>
+            <div class="pnode is-running"><span class="pnode__icon"><svg viewBox="0 0 24 24"><path d="M5 19l4-4M14 4c3 0 6 3 6 6l-6 6-4-4 4-8z"/><path d="M9 15l-3 1 1-3"/><circle cx="15" cy="9" r="1.2"/></svg></span><span class="pnode__name">Deploy</span><span class="pnode__meta">canary 25%</span></div>
+            <div class="pnode is-next"><span class="pnode__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c.8-4 4-6.5 8-6.5s7.2 2.5 8 6.5"/></svg></span><span class="pnode__name">Users</span><span class="pnode__meta">99.98% ok</span></div>
           </div>
 
-          <div class="console__progress"><span></span></div>
+          <pre class="pipe__log"><code><span class="c-muted">$</span> git push origin main
+<span class="c-mint">✓</span> build + unit tests <span class="c-muted">(1m 12s)</span>
+<span class="c-mint">✓</span> terraform apply <span class="c-muted">· 0 to destroy</span>
+<span class="c-mint">✓</span> helm upgrade portal <span class="c-muted">· 3 replicas ready</span>
+<span class="c-violet">→</span> canary 25% <span class="c-muted">· error rate 0.02%</span><span class="caret"></span></code></pre>
 
-          <pre class="console__log"><code><span class="c-muted">$</span> esensible deploy --env production
-<span class="c-mint">✓</span> infrastructure plan applied <span class="c-muted">(IaC)</span>
-<span class="c-mint">✓</span> unit + integration suites passed
-<span class="c-mint">✓</span> regression suite passed <span class="c-muted">(automated)</span>
-<span class="c-violet">→</span> rolling out to production<span class="caret"></span></code></pre>
-
-          <div class="console__metrics">
+          <div class="pipe__metrics">
             <div class="metric">
-              <span class="metric__label">Release cadence</span>
-              <span class="metric__value">Weekly <em>→</em> Daily</span>
-              <svg class="spark" viewBox="0 0 120 32" preserveAspectRatio="none"><polyline points="0,26 15,24 30,25 45,19 60,20 75,13 90,11 105,7 120,4"/></svg>
+              <span class="metric__label">Commit to production</span>
+              <span class="metric__value">Days <em>→</em> 14 min</span>
+              <svg class="spark" viewBox="0 0 120 32" preserveAspectRatio="none"><polyline points="0,6 15,8 30,7 45,13 60,12 75,19 90,21 105,25 120,28"/></svg>
             </div>
             <div class="metric">
-              <span class="metric__label">Quality gates</span>
-              <span class="metric__value">Every commit</span>
+              <span class="metric__label">Deployments this week</span>
+              <span class="metric__value">38 <em>· 0 rollbacks</em></span>
               <div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
             </div>
           </div>
@@ -141,15 +142,15 @@
       </div>
 
       <!-- Capability strip -->
-      <div class="marquee" aria-label="Technologies we work with">
+      <div class="marquee" aria-label="Tools across the pipeline">
         <div class="marquee__track">
           <ul>
-            <li>.NET</li><li>Java</li><li>J2EE</li><li>PHP</li><li>Perl</li><li>Android</li><li>iOS</li>
-            <li>CI/CD</li><li>Infrastructure as Code</li><li>Selenium</li><li>UFT</li><li>Jira</li><li>Data analytics</li>
+            <li>Git</li><li>GitHub Actions</li><li>Docker</li><li>Terraform</li><li>Kubernetes</li><li>Helm</li><li>AWS</li>
+            <li>Azure</li><li>Google Cloud</li><li>.NET</li><li>Java</li><li>Selenium</li><li>Data analytics</li>
           </ul>
           <ul aria-hidden="true">
-            <li>.NET</li><li>Java</li><li>J2EE</li><li>PHP</li><li>Perl</li><li>Android</li><li>iOS</li>
-            <li>CI/CD</li><li>Infrastructure as Code</li><li>Selenium</li><li>UFT</li><li>Jira</li><li>Data analytics</li>
+            <li>Git</li><li>GitHub Actions</li><li>Docker</li><li>Terraform</li><li>Kubernetes</li><li>Helm</li><li>AWS</li>
+            <li>Azure</li><li>Google Cloud</li><li>.NET</li><li>Java</li><li>Selenium</li><li>Data analytics</li>
           </ul>
         </div>
       </div>
@@ -160,7 +161,7 @@
       <div class="container">
         <header class="section__head reveal">
           <p class="eyebrow">Services</p>
-          <h2>Tailored services, designed for your business.</h2>
+          <h2>Services for every stage of the pipeline.</h2>
           <p class="section__lead">Pick one practice or combine them. Each engagement is shaped around your goals, stack and team.</p>
         </header>
 
@@ -230,35 +231,58 @@
       </div>
     </section>
 
-    <!-- Approach -->
-    <section class="section section--alt" id="approach">
+    <!-- Pipeline -->
+    <section class="section section--alt" id="pipeline">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow">Approach</p>
-          <h2>A delivery partner, not just a vendor.</h2>
-          <p class="section__lead">We combine Agile delivery, test-driven development and DevOps practice so quality is built in from day one.</p>
+          <p class="eyebrow">Pipeline</p>
+          <h2>One pipeline, from the first commit to the end user.</h2>
+          <p class="section__lead">Every service we offer maps onto a stage of the delivery pipeline. Engage us for one stage, or let us run the whole line.</p>
         </header>
 
-        <ol class="steps">
-          <li class="step reveal">
-            <span class="step__num">01</span>
-            <h3>Discover</h3>
-            <p>We map your goals, constraints and existing systems before writing a line of code.</p>
+        <ol class="stages">
+          <div class="stages__track" aria-hidden="true"><span class="pkt"></span><span class="pkt"></span></div>
+          <li class="stage reveal">
+            <span class="stage__num">01</span>
+            <span class="stage__icon"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span>
+            <h3>Application code</h3>
+            <p>Modern .NET, Java and PHP applications, written test-first so every change arrives with its own proof.</p>
+            <ul class="tags"><li>App Development</li><li>Quality Engineering</li></ul>
           </li>
-          <li class="step reveal">
-            <span class="step__num">02</span>
-            <h3>Design</h3>
-            <p>Architecture, test strategy and delivery plan are agreed up front, with clear milestones.</p>
+          <li class="stage reveal">
+            <span class="stage__num">02</span>
+            <span class="stage__icon"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg></span>
+            <h3>Infrastructure automation</h3>
+            <p>Networks, clusters and environments defined as code with Terraform, so dev, test and production are identical.</p>
+            <ul class="tags"><li>DevOps</li><li>Consulting</li></ul>
           </li>
-          <li class="step reveal">
-            <span class="step__num">03</span>
-            <h3>Build and test</h3>
-            <p>Short iterations, tests written first and automated quality gates on every change.</p>
+          <li class="stage reveal">
+            <span class="stage__num">03</span>
+            <span class="stage__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.5"/><path d="M12 3.5v6M12 14.5v6M3.5 12h6M14.5 12h6M6 6l4.2 4.2M13.8 13.8L18 18M18 6l-4.2 4.2M10.2 13.8L6 18"/></svg></span>
+            <h3>Kubernetes</h3>
+            <p>Containerised workloads packaged with Helm, with autoscaling, health checks and zero-downtime rollouts.</p>
+            <ul class="tags"><li>DevOps</li></ul>
           </li>
-          <li class="step reveal">
-            <span class="step__num">04</span>
-            <h3>Ship and improve</h3>
-            <p>CI/CD pipelines and consistent environments keep releases fast, safe and measurable.</p>
+          <li class="stage reveal">
+            <span class="stage__num">04</span>
+            <span class="stage__icon"><svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.5-7.97A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7z"/></svg></span>
+            <h3>Cloud providers</h3>
+            <p>AWS, Azure or Google Cloud, with landing zones, identity, cost controls and security built into the platform.</p>
+            <ul class="tags"><li>Consulting</li><li>DevOps</li></ul>
+          </li>
+          <li class="stage reveal">
+            <span class="stage__num">05</span>
+            <span class="stage__icon"><svg viewBox="0 0 24 24"><path d="M5 19l4-4M14 4c3 0 6 3 6 6l-6 6-4-4 4-8z"/><path d="M9 15l-3 1 1-3"/><circle cx="15" cy="9" r="1.2"/></svg></span>
+            <h3>Deployment</h3>
+            <p>CI/CD pipelines with automated quality gates, canary or blue-green releases and one-click rollback.</p>
+            <ul class="tags"><li>DevOps</li><li>Quality Engineering</li></ul>
+          </li>
+          <li class="stage reveal">
+            <span class="stage__num">06</span>
+            <span class="stage__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c.8-4 4-6.5 8-6.5s7.2 2.5 8 6.5"/></svg></span>
+            <h3>End user</h3>
+            <p>Monitoring, usage analytics and trained people on both sides, so what ships keeps working for the people using it.</p>
+            <ul class="tags"><li>Data Solutions</li><li>Training</li><li>Staffing</li></ul>
           </li>
         </ol>
       </div>
@@ -425,7 +449,7 @@
       </nav>
       <nav class="footer__col" aria-label="Company">
         <h4>Company</h4>
-        <a href="#approach">Approach</a>
+        <a href="#pipeline">Pipeline</a>
         <a href="#engage">Engagement models</a>
         <a href="#training">Training</a>
         <a href="#contact">Contact</a>
