@@ -112,6 +112,36 @@
     if (field) field.classList.remove('is-invalid');
   });
 
+
+  // Scroll scene: zoom from the person into the laptop screen, switching panes as you go
+  var scene = document.getElementById('scene');
+  if (scene && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var zoom = scene.querySelector('.scene__zoom');
+    var panes = scene.querySelectorAll('.screen__pane');
+    var steps = scene.querySelectorAll('.scene__step');
+    var current = -1, ticking = false;
+    function updateScene() {
+      ticking = false;
+      var rect = scene.getBoundingClientRect();
+      var total = scene.offsetHeight - window.innerHeight;
+      var p = Math.min(1, Math.max(0, -rect.top / total));
+      // ease: hold the wide shot briefly, then zoom to ~3.4x
+      var z = p < 0.12 ? 1 : 1 + 2.4 * Math.min(1, (p - 0.12) / 0.38);
+      zoom.style.setProperty('--zoom', z.toFixed(3));
+      scene.classList.toggle('is-zoomed', p > 0.12);
+      var idx = p < 0.42 ? 0 : p < 0.72 ? 1 : 2;
+      if (idx !== current) {
+        current = idx;
+        panes.forEach(function (el, i) { el.classList.toggle('is-active', i === idx); });
+        steps.forEach(function (el, i) { el.classList.toggle('is-active', i === idx); });
+      }
+    }
+    function onSceneScroll() { if (!ticking) { ticking = true; requestAnimationFrame(updateScene); } }
+    window.addEventListener('scroll', onSceneScroll, { passive: true });
+    window.addEventListener('resize', onSceneScroll);
+    updateScene();
+  }
+
   // Footer year
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();

@@ -67,6 +67,14 @@
         <div class="glow glow--violet"></div>
         <div class="glow glow--mint"></div>
         <div class="grid-lines"></div>
+        <div class="glyphs" aria-hidden="true">
+          <svg class="glyph g1" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+          <svg class="glyph g2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.5"/><path d="M12 3.5v6M12 14.5v6M3.5 12h6M14.5 12h6M6 6l4.2 4.2M13.8 13.8L18 18M18 6l-4.2 4.2M10.2 13.8L6 18"/></svg>
+          <svg class="glyph g3" viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.5-7.97A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7z"/></svg>
+          <svg class="glyph g4" viewBox="0 0 24 24"><path d="M4 6l6 6-6 6M12 18h8"/></svg>
+          <svg class="glyph g5" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>
+          <svg class="glyph g6" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/></svg>
+        </div>
       </div>
 
       <div class="container hero__inner">
@@ -285,6 +293,99 @@
             <ul class="tags"><li>Data Solutions</li><li>Training</li><li>Staffing</li></ul>
           </li>
         </ol>
+      </div>
+    </section>
+
+    <!-- Scroll scene: from a laptop to the cluster -->
+    <section class="scene" id="scene" aria-label="How the team works, from code to Kubernetes">
+      <div class="scene__sticky">
+        <div class="container scene__inner">
+          <div class="scene__copy">
+            <p class="eyebrow">In practice</p>
+            <h2>Look over our shoulder.</h2>
+            <ol class="scene__steps">
+              <li class="scene__step is-active" data-step="0">
+                <span class="scene__k">01</span>
+                <h3>Write it in Python</h3>
+                <p>An agent is a few lines of code with real tools attached: git, Helm and kubectl.</p>
+              </li>
+              <li class="scene__step" data-step="1">
+                <span class="scene__k">02</span>
+                <h3>Let AI agents do the legwork</h3>
+                <p>Test, infrastructure and review agents work through the plan while an engineer watches and approves.</p>
+              </li>
+              <li class="scene__step" data-step="2">
+                <span class="scene__k">03</span>
+                <h3>Ship it on Kubernetes</h3>
+                <p>A rolling update into production, verified pod by pod, with rollback one command away.</p>
+              </li>
+            </ol>
+            <p class="scene__hint" aria-hidden="true">Keep scrolling to zoom in</p>
+          </div>
+
+          <div class="scene__stage" aria-hidden="true">
+            <div class="scene__zoom">
+              <svg class="scene__art" viewBox="0 0 600 420">
+                <defs>
+                  <linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b6cff"/><stop offset="1" stop-color="#5ee6b0"/></linearGradient>
+                  <radialGradient id="sglow" cx="50%" cy="60%" r="50%"><stop offset="0" stop-color="#8b6cff" stop-opacity=".35"/><stop offset="1" stop-color="#8b6cff" stop-opacity="0"/></radialGradient>
+                </defs>
+                <!-- ambient -->
+                <ellipse cx="300" cy="250" rx="260" ry="170" fill="url(#sglow)"/>
+                <!-- person -->
+                <g class="person">
+                  <path d="M190 330c0-70 50-112 110-112s110 42 110 112z" fill="#1b1830" stroke="#3a3560" stroke-width="2"/>
+                  <path d="M262 212c8 12 24 20 38 20s30-8 38-20" fill="none" stroke="#3a3560" stroke-width="2"/>
+                  <rect x="282" y="168" width="36" height="34" rx="12" fill="#2a2446"/>
+                  <circle cx="300" cy="140" r="40" fill="#2f2a4f" stroke="#4a4478" stroke-width="2"/>
+                  <path d="M262 132c6-26 24-40 42-40s34 12 40 36c-10-10-22-14-40-14s-32 6-42 18z" fill="#17142a"/>
+                  <!-- arms -->
+                  <path d="M212 300c20-30 40-46 70-52" fill="none" stroke="#3a3560" stroke-width="22" stroke-linecap="round"/>
+                  <path d="M388 300c-20-30-40-46-70-52" fill="none" stroke="#3a3560" stroke-width="22" stroke-linecap="round"/>
+                </g>
+                <!-- desk -->
+                <rect x="40" y="328" width="520" height="14" rx="7" fill="#15132a" stroke="#2c2849" stroke-width="2"/>
+                <!-- laptop -->
+                <g class="laptop">
+                  <path d="M196 318h208l12 12H184z" fill="#2b2749" stroke="#4a4478" stroke-width="2" stroke-linejoin="round"/>
+                  <rect x="206" y="188" width="188" height="130" rx="10" fill="#1a1730" stroke="url(#sg)" stroke-width="2.5"/>
+                  <rect x="215" y="197" width="170" height="108" rx="5" fill="#07070c"/>
+                  <circle cx="300" cy="192.5" r="1.8" fill="#5ee6b0"/>
+                  <!-- glow spilling from screen onto face -->
+                  <path d="M215 197h170v30H215z" fill="url(#sg)" opacity=".10"/>
+                </g>
+              </svg>
+
+              <div class="screen">
+                <div class="screen__bar"><span></span><span></span><span></span><em class="screen__title">agent.py</em></div>
+                <pre class="screen__pane is-active" data-step="0"><code><span class="k">from</span> esensible <span class="k">import</span> Agent, tools
+
+deploy = Agent(
+    name=<span class="s">"release-bot"</span>,
+    tools=[tools.git, tools.helm, tools.kubectl],
+)
+
+plan = deploy.plan(<span class="s">"ship customer-portal v2.4"</span>)
+<span class="k">for</span> step <span class="k">in</span> plan:
+    step.run(verify=<span class="c">True</span>)</code></pre>
+                <pre class="screen__pane" data-step="1"><code><span class="m">$</span> python agent.py
+<span class="a">[release-bot]</span>  planning 5 steps
+<span class="a">[test-agent]</span>   412 tests <span class="g">passed</span> · 0 failed
+<span class="a">[infra-agent]</span>  terraform plan <span class="m">+2 ~1 -0</span>
+<span class="a">[review-agent]</span> changes <span class="g">approved</span>
+<span class="a">[security]</span>     image scan <span class="g">clean</span>
+<span class="a">[release-bot]</span>  handing off to kubernetes <span class="v">→</span></code></pre>
+                <pre class="screen__pane" data-step="2"><code><span class="m">$</span> kubectl rollout status deploy/portal -n prod
+Waiting for rollout: 2 of 3 updated
+deployment "portal" <span class="g">successfully rolled out</span>
+<span class="m">$</span> kubectl get pods -n prod
+portal-7d9f-abc1   1/1   <span class="g">Running</span>   0   41s
+portal-7d9f-def2   1/1   <span class="g">Running</span>   0   38s
+portal-7d9f-ghi3   1/1   <span class="g">Running</span>   0   22s</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
